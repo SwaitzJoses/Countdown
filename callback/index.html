@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="countDown()">
+
+    <!-- <form name="myForm" action="#"> -->
+        <div class="center" style=" display: flex;  flex-direction: column; align-items: center; margin-top:200px; object-fit: cover;">
+        <!-- <input type="button" value="Start counting" 
+            onclick="startCounting( )" /> -->
+        
+
+        <div id="1" style="font-size:500px;"> </div>
+        <div id="2" style="font-size:300px;"> </div>
+        </div>
+
+    <script>
+//         function startTime() {
+
+// console.log("1")
+//   setTimeout(startTime, 500);
+// }
+
+
+var timer;
+var counter = 11;
+
+// function startCounting( )
+// {
+//     timer = setTimeout( "countDown()");
+//     // document.getElementById("1").innerHTML = counter;    // show the initial value
+// }
+
+function countDown( )
+{
+    counter = counter - 1;
+    document.getElementById("1").innerHTML = counter; 
+    if (counter == 0)
+    {
+         clearTimeout( timer );
+         timer = null;
+         document.getElementById("2").innerHTML = "Welcome";
+         document.getElementById("1").innerHTML = "";
+
+    }
+    else
+    {
+        timer = setTimeout( "countDown()", 1000);
+    }
+}
+
+
+
+    </script>
+</body>
+</html>
